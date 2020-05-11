@@ -1,0 +1,288 @@
+/*
+Author: Yusuf Akcesme
+Email: yusufakcesme0[at]gmail.com
+Github: github.com/yusufakcesme
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+/* Color Variables */
+body {
+  font-family: 'Merriweather', serif;
+  background: #0e0e11;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 1100px;
+  min-height: 100vh;
+  margin: 0 auto;
+  /* header start*/
+  /* header finish*/
+}
+
+.container header {
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container header .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  padding: 15px 30px;
+  border: 3px solid #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container header nav a {
+  display: block;
+  margin-left: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.container header nav a.primary-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0e0e11;
+  background: #fff;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.container header nav a.primary-button .fa-angle-double-right {
+  font-weight: 300;
+  margin-left: 10px;
+  color: #f67521;
+}
+
+.container header nav a.primary-button:hover {
+  background-color: #f67521;
+  color: #fff;
+}
+
+.container header nav a.primary-button:hover .fa-angle-double-right {
+  color: #fff;
+}
+
+.container main {
+  width: 100%;
+  height: auto;
+  margin: 60px auto;
+  /* How it works section */
+}
+
+.container main .hero-banner {
+  width: 100%;
+  min-height: 320px;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.container main .hero-banner .inner {
+  max-width: 640px;
+}
+
+.container main .hero-banner .inner h2 {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.container main .hero-banner .inner p {
+  line-height: 2.2;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 15px;
+}
+
+.container main .hero-banner .inner a.banner-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  padding: 0 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #fff;
+  background: transparent;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  position: relative;
+}
+
+.container main .hero-banner .inner a.banner-button .fa-hand-peace {
+  color: #f67521;
+  margin-left: 10px;
+}
+
+.container main .hero-banner .inner a.banner-button:hover {
+  color: #0e0e11;
+}
+
+.container main .hero-banner .inner a.banner-button:hover::before {
+  width: 100%;
+}
+
+.container main .hero-banner .inner a.banner-button::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: .5s width;
+  transition: .5s width;
+  background: #fff;
+}
+
+.container main .hero-banner .banner-img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  opacity: .7;
+}
+
+.container main .hero-banner .banner-img img {
+  width: auto;
+  height: 320px;
+}
+
+.container main .hiw-section {
+  width: 100%;
+  height: auto;
+}
+
+.container main .hiw-section h2 {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.container main .hiw-section .hiw-wrapper {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.container main .hiw-section .hiw-wrapper .hiw-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 15px;
+  border: 3px solid #17171b;
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-right: none;
+}
+
+.container main .hiw-section .hiw-wrapper .hiw-box .hiw-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container main .hiw-section .hiw-wrapper .hiw-box .hiw-text span {
+  font-size: 36px;
+  color: #fff;
+  opacity: .4;
+  margin-right: 20px;
+}
+
+.container main .hiw-section .hiw-wrapper .hiw-box .hiw-text p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container main .hiw-section .hiw-wrapper .hiw-box .hiw-number {
+  position: absolute;
+  top: -70px;
+  right: -27px;
+  font-size: 170px;
+  font-weight: 900;
+  color: #17171b;
+}
+
+/* container finish */
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,253 @@
+/*
+Author: Yusuf Akcesme
+Email: yusufakcesme0[at]gmail.com
+Github: github.com/yusufakcesme
+*/
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+/* Color Variables */
+$orange: #f67521;
+
+body {
+  font-family: 'Merriweather', serif;
+  background: #0e0e11;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.container {
+  width: 1100px;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  /* header start*/    
+  header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      a {
+        display: flex;
+        color: #fff;
+        padding: 15px 30px;
+        border: 3px solid #fff;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+      nav {
+        display: flex;
+        align-items: center;
+        a {
+          display: block;
+          margin-left: 40px;
+          color: #fff;
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: 2px;
+        }
+
+        a.primary-button {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          letter-spacing: 1px;
+          padding: 0 20px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #0e0e11;
+          background: #fff;
+          transition: .3s all;
+
+          .fa-angle-double-right {
+            font-weight: 300;
+            margin-left: 10px;
+            color: $orange
+          }
+
+          &:hover {
+            background-color: $orange;
+            color: #fff;
+            .fa-angle-double-right {
+              color: #fff;
+            }
+          }
+
+        }
+
+      }
+  } /* header finish*/
+
+
+
+  main {
+    width: 100%;
+    height: auto;
+    margin: 60px auto;
+
+    .hero-banner {
+      width: 100%;
+      min-height: 320px;
+      position: relative;
+      margin-bottom: 60px;
+
+      .inner {
+        max-width: 640px;
+
+        h2 {
+          font-size: 34px;
+          font-weight: 900;
+          letter-spacing: 1px;
+          color: #fff;
+          margin-bottom: 15px;
+          position: relative;
+          display: inline-flex;
+        }
+        p {
+          line-height: 2.2;
+          font-size: 18px;
+          color: rgba(255,255,255,.6);
+          margin-bottom: 15px;
+        }
+
+        a.banner-button {
+          display: inline-flex;
+          align-items: center;
+          height: 50px;
+          padding: 0 25px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #fff;
+          box-sizing: border-box;
+          border: 3px solid #fff;
+          background: transparent;
+          transition: .3s all;
+          position: relative;
+
+          .fa-hand-peace {
+            color: $orange;
+            margin-left: 10px;
+          }
+          &:hover{
+            color: #0e0e11;
+            &::before {
+              width: 100%;
+            }
+          }
+
+          &::before {
+            content: "";
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: .5s width;
+            background: #fff;
+        }
+        }
+      }
+
+      .banner-img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        opacity: .7;
+        img {
+          width: auto;
+          height: 320px;
+        }
+      }
+    }
+
+
+    /* How it works section */
+
+    .hiw-section {
+      width: 100%;
+      height: auto;
+      h2 {
+        font-size: 34px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        color: #fff;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-flex;
+      }
+      .hiw-wrapper {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 0 -15px;
+
+        .hiw-box {
+          flex: 1;
+          margin: 0 15px;
+          border: 3px solid #17171b;
+          padding: 20px 25px;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border-right: none;
+
+          .hiw-text {
+            display: flex;
+            align-items: center;
+            span {
+              font-size: 36px;
+              color: #fff;
+              opacity: .4;
+              margin-right: 20px;
+            }
+            p {
+              font-size: 16px;
+              color: #fff;
+              line-height: 1.5;
+              flex: 1;
+            }
+          }
+
+          .hiw-number {
+            position: absolute;
+            top: -70px;
+            right: -27px;
+            font-size: 170px;
+            font-weight: 900;
+            color: #17171b;
+          }
+
+        }
+
+      }
+    }
+
+  
+
+
+
+
+  }
+
+
+
+
+
+
+
+} /* container finish */
+
