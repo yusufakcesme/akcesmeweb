@@ -45,7 +45,31 @@ body {
         justify-content: center;
         font-size: 30px;
         font-weight: bold;
+        position: relative;
+        &::before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #f67521;
+          position: absolute;
+          bottom: 13px;
+          right: 27%;
+          border: 3px solid #0e0e11;
       }
+        &::after {
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #f67521;
+          position: absolute;
+          bottom: 13px;
+          right: 38%;
+          border: 3px solid #0e0e11;
+      }
+      }
+
     }
       nav {
         display: flex;
@@ -114,6 +138,17 @@ body {
           margin-bottom: 15px;
           position: relative;
           display: inline-flex;
+          &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #f67521;
+            position: absolute;
+            bottom: 5px;
+            right: 4px;
+            border: 3px solid #0e0e11;
+        }
         }
         p {
           line-height: 2.2;
@@ -188,6 +223,17 @@ body {
         margin-bottom: 15px;
         position: relative;
         display: inline-flex;
+        &::before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #f67521;
+          position: absolute;
+          bottom: 5px;
+          right: 4px;
+          border: 3px solid #0e0e11;
+      }
       }
       .hiw-wrapper {
         width: 100%;
