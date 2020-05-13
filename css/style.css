@@ -47,6 +47,10 @@ body {
           justify-content: space-between;
 }
 
+.container header .hamburger-button {
+  display: none;
+}
+
 .container header .logo a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,6 +156,12 @@ body {
   min-height: 320px;
   position: relative;
   margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container main .hero-banner .inner {
@@ -237,10 +247,6 @@ body {
 }
 
 .container main .hero-banner .banner-img {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
   opacity: .7;
 }
 
@@ -994,4 +1000,426 @@ body {
 }
 
 /* container finish */
+.mobile-menu.active-menu {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0e0e11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.mobile-menu .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  padding: 15px 30px;
+  border: 3px solid #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+}
+
+.mobile-menu .logo a::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f67521;
+  position: absolute;
+  bottom: 13px;
+  right: 27%;
+  border: 3px solid #0e0e11;
+}
+
+.mobile-menu .logo a::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f67521;
+  position: absolute;
+  bottom: 13px;
+  right: 38%;
+  border: 3px solid #0e0e11;
+}
+
+.mobile-menu nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-menu nav a {
+  display: block;
+  margin: 20px auto;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.mobile-menu nav a.primary-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0e0e11;
+  background: #fff;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.mobile-menu nav a.primary-button .fa-angle-double-right {
+  font-weight: 300;
+  margin-left: 10px;
+  color: #f67521;
+}
+
+.mobile-menu nav a.primary-button:hover {
+  background-color: #f67521;
+  color: #fff;
+}
+
+.mobile-menu nav a.primary-button:hover .fa-angle-double-right {
+  color: #fff;
+}
+
+.mobile-menu .menu-close-button {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .container header {
+    height: auto;
+    margin: 20px auto;
+  }
+  .container header .logo a {
+    padding: 10px 16px;
+    font-size: 24px;
+  }
+  .container header .logo a::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #f67521;
+    position: absolute;
+    bottom: 8px;
+    right: 25.5%;
+    border: 3px solid #0e0e11;
+  }
+  .container header .logo a::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #f67521;
+    position: absolute;
+    bottom: 8px;
+    right: 37%;
+    border: 3px solid #0e0e11;
+  }
+  .container header nav {
+    display: none;
+  }
+  .container header .hamburger-button {
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .container main {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .container main .hero-banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .container main .hero-banner .inner {
+    margin: 0 auto;
+  }
+  .container main .hero-banner .inner h2 {
+    font-size: 24px;
+  }
+  .container main .hero-banner .inner h2::before {
+    width: 5px;
+    height: 5px;
+    bottom: 0;
+    right: 2px;
+  }
+  .container main .hero-banner .inner p {
+    font-size: 16px;
+  }
+  .container main .hero-banner .banner-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container main .hero-banner .banner-img img {
+    width: 90%;
+    height: auto;
+  }
+  .container main .hiw-section {
+    margin-bottom: 0px;
+  }
+  .container main .hiw-section h2 {
+    font-size: 30px;
+  }
+  .container main .hiw-section h2::before {
+    right: 3px;
+    bottom: 1;
+  }
+  .container main .hiw-section .hiw-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+  .container main .hiw-section .hiw-wrapper .hiw-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-right: 3px solid #17171b;
+  }
+  .container main .hiw-section .hiw-wrapper .hiw-box .hiw-text p {
+    font-size: 14px;
+  }
+  .container main .hiw-section .hiw-wrapper .hiw-box .hiw-number {
+    display: none;
+  }
+  .container main .tech-section {
+    margin-top: 50px;
+  }
+  .container main .tech-section h2 {
+    font-size: 30px;
+  }
+  .container main .tech-section h2::before {
+    right: 3px;
+    bottom: 1;
+  }
+  .container main .tech-section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .container main .tech-section ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 150px;
+    margin-left: 0;
+  }
+  .container main .tech-section ul::-webkit-scrollbar {
+    display: none;
+  }
+  .container main .works-section {
+    margin-top: 50px;
+  }
+  .container main .works-section h2 {
+    font-size: 30px;
+  }
+  .container main .works-section h2::before {
+    right: 3px;
+    bottom: 1;
+  }
+  .container main .works-section .work-item {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin-bottom: 60px;
+  }
+  .container main .works-section .work-item .work-browser {
+    width: 100%;
+  }
+  .container main .works-section .work-item .work-browser .browser-content {
+    height: 240px;
+  }
+  .container main .works-section .work-item .work-inner {
+    padding: 0;
+    margin-top: 14px;
+  }
+  .container main .works-section .work-item .work-inner .work-title {
+    font-size: 20px;
+  }
+  .container main .works-section .work-item .work-inner .work-tags a {
+    font-size: 14px;
+  }
+  .container main .works-section .work-item .work-inner .work-description {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .container main .contact-section h2 {
+    font-size: 30px;
+    margin-bottom: -15px;
+  }
+  .container main .contact-section h2::before {
+    right: -2px;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+  }
+  .container main .contact-section .contact-boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container main .contact-section .contact-boxes a.box {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin: 0 0 15px !important;
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+  .container main .contact-section .form-container {
+    width: 100%;
+    height: auto;
+  }
+  .container main .contact-section .form-container form.contact-form .form-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container main .contact-section .form-container form.contact-form .form-label .form-input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0px;
+  }
+  .container main .contact-section .form-container form.contact-form .form-label .form-input input {
+    margin-bottom: 15px;
+  }
+  .container main .contact-section .form-container form.contact-form .form-label + .form-label {
+    margin-top: 0px;
+  }
+  .container main .contact-section .form-container form.contact-form .form-label textarea {
+    height: 150px;
+  }
+  .container main .social-section {
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  .container main .social-section h2 {
+    font-size: 30px;
+  }
+  .container main .social-section h2::before {
+    right: -2px;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+  }
+  .container main .social-section ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 !important;
+  }
+  .container main .social-section ul li {
+    width: 100% !important;
+    margin-left: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
