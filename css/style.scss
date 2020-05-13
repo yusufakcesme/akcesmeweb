@@ -533,11 +533,297 @@ body {
         flex-direction: row-reverse;
       }
     }/* work item finish */
+  }
 
 
+  .contact-section {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    scroll-margin-top: 50px;
+
+    h2 {
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #fff;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-flex;
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #f67521;
+        position: absolute;
+        bottom: 5px;
+        right: -5px;
+        border: 3px solid #0e0e11;
+    }
+  }
+
+  .contact-boxes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    a.box {
+      flex: 1;
+      background: rgba(255,255,255,.1);
+      padding: 20px 25px;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      color: #fff;
+      line-height: 1.4;
+      transition: .3s all;
+      & .fa-envelope, & .fa-whatsapp {
+        color: $orange;
+        margin-right: 15px;
+        font-size: 30px;
+      }
+
+      &:first-child {
+        margin-right: 15px;
+      }
+      &:last-child {
+        margin-left: 15px;
+      }
+      &:hover {
+        background: rgba(255,255,255,.2);
+      }
+    }
 
   }
 
+  .form-container {
+    width: 100%;
+    height: auto;
+
+    form.contact-form {
+
+      .form-label {
+        display: flex;
+        margin: 0 -15px;
+
+        .form-input {
+          flex: 1;
+          margin: 0 15px;
+
+          input {
+            font-family: Merriweather,sans-serif;
+            border: 3px solid rgba(255,255,255,.1);
+            height: 50px;
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            background: transparent;
+            color: #fff;
+            transition: .3s all;
+            &:focus {
+              border: 3px solid $orange;
+            }
+          } 
+        }
+        & + .form-label {
+          margin-top: 25px;
+        }
+
+        textarea {
+          font-family: Merriweather,sans-serif;
+          border: 3px solid rgba(255,255,255,.1);
+          padding: 15px;
+          font-size: 16px;
+          line-height: 1.6;
+          font-weight: 600;
+          letter-spacing: 2px;
+          width: 100%;
+          overflow: auto;
+          resize: none;
+          box-sizing: border-box;
+          background: transparent;
+          color: #fff;
+          transition: .3s all;
+          &:focus {
+            border: 3px solid $orange;
+          }
+        }
+      }
+
+      button.send-button {
+        margin-top: 20px;
+        font-family: Merriweather,sans-serif;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+        height: 50px;
+        padding: 0 25px;
+        font-weight: 500;
+        color: #fff;
+        box-sizing: border-box;
+        border: 3px solid #fff;
+        background: transparent;
+        transition: 500ms color;
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          width: 0;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: 500ms width;
+          background: #fff;
+        }
+        &:hover {
+          color: #0e0e11;
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+
+    }
+
+  }
+  }
+
+
+  .social-section {
+    width: 100%;
+    height: auto;
+    margin-top: 120px;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #fff;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-flex;
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #f67521;
+        position: absolute;
+        bottom: 5px;
+        right: -4px;
+        border: 3px solid #0e0e11;
+    }
+  }
+
+    ul {
+      display: flex;
+      margin: 0 -15px;
+
+      li {
+        width: calc(100% / 3 - 30px);
+        margin: 0 15px 15px;
+        a {
+          display: flex;
+          height: 50px;
+          border: 3px solid #fff;
+          align-items: center;
+          font-size: 16px;
+          color: #fff;
+          letter-spacing: 1px;
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+          transition: 300ms color;
+          span.social-icon {
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-right: 3px solid #fff;
+            margin-right: 20px;
+          }
+
+          &:hover::before {
+            width: 60%;
+          } 
+
+          &::before {
+            content: "";
+            width: 0;
+            height: 100%;
+            background: #fff;
+            opacity: .3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: skew(-20deg);
+            transition: 500ms all;
+          }
+
+        }
+        &.instagram {
+          a::before {
+            background: #e1306c;
+          }
+          span.social-icon {
+            background: #e1306c;
+          }
+        }
+
+        &.github {
+          a::before {
+            background: #333;
+          }
+          span.social-icon {
+            background: #333;
+          }
+        }
+        &.whatsapp {
+          a::before {
+            background: #25d366;
+          }
+          span.social-icon {
+            background: #25d366;
+          }
+        }
+      }
+    }
+  }
+
+
+  footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-style: italic;
+      font-size: 15px;
+      color: rgba(255,255,255,.5);
+      line-height: 1.4;
+      span {
+        color: #e1306c;
+      }
+      a {
+        color: #fff;
+      }
+    }
+  }
 
 
   } /* main finish */

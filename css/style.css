@@ -639,6 +639,350 @@ body {
           flex-direction: row-reverse;
 }
 
+.container main .contact-section {
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  scroll-margin-top: 50px;
+}
+
+.container main .contact-section h2 {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.container main .contact-section h2::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f67521;
+  position: absolute;
+  bottom: 5px;
+  right: -5px;
+  border: 3px solid #0e0e11;
+}
+
+.container main .contact-section .contact-boxes {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container main .contact-section .contact-boxes a.box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.4;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.container main .contact-section .contact-boxes a.box .fa-envelope, .container main .contact-section .contact-boxes a.box .fa-whatsapp {
+  color: #f67521;
+  margin-right: 15px;
+  font-size: 30px;
+}
+
+.container main .contact-section .contact-boxes a.box:first-child {
+  margin-right: 15px;
+}
+
+.container main .contact-section .contact-boxes a.box:last-child {
+  margin-left: 15px;
+}
+
+.container main .contact-section .contact-boxes a.box:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.container main .contact-section .form-container {
+  width: 100%;
+  height: auto;
+}
+
+.container main .contact-section .form-container form.contact-form .form-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.container main .contact-section .form-container form.contact-form .form-label .form-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 15px;
+}
+
+.container main .contact-section .form-container form.contact-form .form-label .form-input input {
+  font-family: Merriweather,sans-serif;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  height: 50px;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  color: #fff;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.container main .contact-section .form-container form.contact-form .form-label .form-input input:focus {
+  border: 3px solid #f67521;
+}
+
+.container main .contact-section .form-container form.contact-form .form-label + .form-label {
+  margin-top: 25px;
+}
+
+.container main .contact-section .form-container form.contact-form .form-label textarea {
+  font-family: Merriweather,sans-serif;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 100%;
+  overflow: auto;
+  resize: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  color: #fff;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.container main .contact-section .form-container form.contact-form .form-label textarea:focus {
+  border: 3px solid #f67521;
+}
+
+.container main .contact-section .form-container form.contact-form button.send-button {
+  margin-top: 20px;
+  font-family: Merriweather,sans-serif;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  height: 50px;
+  padding: 0 25px;
+  font-weight: 500;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #fff;
+  background: transparent;
+  -webkit-transition: 500ms color;
+  transition: 500ms color;
+  position: relative;
+  z-index: 1;
+}
+
+.container main .contact-section .form-container form.contact-form button.send-button::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: 500ms width;
+  transition: 500ms width;
+  background: #fff;
+}
+
+.container main .contact-section .form-container form.contact-form button.send-button:hover {
+  color: #0e0e11;
+}
+
+.container main .contact-section .form-container form.contact-form button.send-button:hover::before {
+  width: 100%;
+}
+
+.container main .social-section {
+  width: 100%;
+  height: auto;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.container main .social-section h2 {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.container main .social-section h2::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f67521;
+  position: absolute;
+  bottom: 5px;
+  right: -4px;
+  border: 3px solid #0e0e11;
+}
+
+.container main .social-section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.container main .social-section ul li {
+  width: calc(100% / 3 - 30px);
+  margin: 0 15px 15px;
+}
+
+.container main .social-section ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  border: 3px solid #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-transition: 300ms color;
+  transition: 300ms color;
+}
+
+.container main .social-section ul li a span.social-icon {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  border-right: 3px solid #fff;
+  margin-right: 20px;
+}
+
+.container main .social-section ul li a:hover::before {
+  width: 60%;
+}
+
+.container main .social-section ul li a::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #fff;
+  opacity: .3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  -webkit-transition: 500ms all;
+  transition: 500ms all;
+}
+
+.container main .social-section ul li.instagram a::before {
+  background: #e1306c;
+}
+
+.container main .social-section ul li.instagram span.social-icon {
+  background: #e1306c;
+}
+
+.container main .social-section ul li.github a::before {
+  background: #333;
+}
+
+.container main .social-section ul li.github span.social-icon {
+  background: #333;
+}
+
+.container main .social-section ul li.whatsapp a::before {
+  background: #25d366;
+}
+
+.container main .social-section ul li.whatsapp span.social-icon {
+  background: #25d366;
+}
+
+.container main footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container main footer p {
+  font-style: italic;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+.container main footer p span {
+  color: #e1306c;
+}
+
+.container main footer p a {
+  color: #fff;
+}
+
 .container ::-moz-selection {
   background: #f67521;
   color: #fff;
